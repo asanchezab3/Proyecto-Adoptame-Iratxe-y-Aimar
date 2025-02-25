@@ -10,5 +10,6 @@ type Params = {
   "/": {};
   "/lista": {};
   "/detalle": {};
+  "/login": {};
   "/contacto": {};
 };

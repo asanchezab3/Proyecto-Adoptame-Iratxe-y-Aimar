@@ -4,7 +4,9 @@ const Contacto = () => {
     return (
         <div>
             <Menu />
-            <p>Esta es la página de contacto</p>
+            <div className="bg-[#FFFFFF] text-black ">
+                <p>Esta es la página de contacto</p>
+            </div>
         </div>
     );
 };
