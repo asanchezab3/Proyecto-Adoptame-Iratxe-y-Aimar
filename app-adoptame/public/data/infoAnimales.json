@@ -1,0 +1,94 @@
+[
+  {
+    "id": "animal1",
+    "nombre": "Luna",
+    "raza": "Husky",
+    "fechaNacimiento": "2023-09-26T00:00:00Z",
+    "refugio": "Protectora de animales de Navarra",
+    "like": {
+      "0": "Dar largos paseos por el monte",
+      "1": "Jugar con los niños"
+    },
+    "notLike": {
+      "0": "Los sitios con mucha gente"
+    },
+    "descripcion": "Luna es una husky enérgica y juguetona que disfruta explorando la naturaleza y pasando tiempo con los más pequeños. Sin embargo, prefiere los espacios tranquilos, lejos de multitudes ruidosas."
+  },
+  {
+    "id": "animal2",
+    "nombre": "Gato",
+    "raza": "Gato común",
+    "fechaNacimiento": "2024-08-20T00:00:00Z",
+    "refugio": "Huellitas",
+    "like": {
+      "0": "El calor",
+      "1": "Jugar",
+      "2": "Las hierbas como la catnip o la valeriana"
+    },
+    "notLike": {
+      "0": "Los ruidos fuertes",
+      "1": "La suciedad en su arenero"
+    },
+    "descripcion": "Este gatito curioso y juguetón adora los lugares cálidos y las hierbas aromáticas como la valeriana. Aunque le encanta divertirse, necesita un ambiente tranquilo y limpio para sentirse seguro."
+  },
+  {
+    "id": "animal3",
+    "nombre": "Garfield",
+    "raza": "Gato común",
+    "fechaNacimiento": "2017-02-21T00:00:00Z",
+    "refugio": "Protectora de animales Ribera",
+    "like": {
+      "0": "Los rascadores",
+      "1": "El agua fresca y corriente"
+    },
+    "notLike": {
+      "0": "Cambios en su rutina"
+    },
+    "descripcion": "Garfield es un gato con experiencia que disfruta afilando sus uñas en los rascadores y bebiendo agua fresca. Prefiere la estabilidad y los días predecibles, sin cambios bruscos en su entorno."
+  },
+  {
+    "id": "animal4",
+    "nombre": "Beltza",
+    "raza": "Perro",
+    "fechaNacimiento": "2022-07-26T00:00:00Z",
+    "refugio": "Protectora de animales de Navarra",
+    "like": {
+      "0": "Dar largos paseos por el monte",
+      "1": "Jugar con los niños"
+    },
+    "notLike": {
+      "0": "Los sitios con mucha gente"
+    },
+    "descripcion": "Beltza es un perro sociable y activo al que le encanta correr por la montaña y jugar con niños. Prefiere los espacios abiertos y tranquilos, evitando los lugares abarrotados de gente."
+  },
+  {
+    "id": "animal5",
+    "nombre": "Mika",
+    "raza": "Perro",
+    "fechaNacimiento": "2000-02-26T00:00:00Z",
+    "refugio": "Huellitas",
+    "like": {
+      "0": "Dar largos paseos por el monte",
+      "1": "Jugar con los niños"
+    },
+    "notLike": {
+      "0": "Los sitios con mucha gente"
+    },
+    "descripcion": "Mika es una compañera leal y amorosa que ha disfrutado de muchos años de aventuras al aire libre. Aunque sigue siendo activa, valora los momentos de tranquilidad y compañía sin grandes multitudes."
+  },
+  {
+    "id": "animal6",
+    "nombre": "Señor Loro",
+    "raza": "Un loro",
+    "fechaNacimiento": "2022-09-26T00:00:00Z",
+    "refugio": "Protectora de animales Ribera",
+    "like": {
+      "0": "La compañía y la interacción",
+      "1": "Imitar sonidos y hablar"
+    },
+    "notLike": {
+      "0": "Ruidos fuertes y repentinos"
+    },
+    "descripcion": "Señor Loro es un ave inteligente y sociable que disfruta de la compañía y de aprender nuevos sonidos. Sin embargo, prefiere ambientes calmados sin ruidos estridentes que lo asusten."
+  }
+]

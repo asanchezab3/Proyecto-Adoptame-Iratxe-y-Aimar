@@ -6,7 +6,7 @@ const Menu = () => {
     <nav className="bg-[#865E53] text-white p-2 sm:p-4 flex justify-between items-center">
         <div className="flex items-center space-x-10">
             <Link to="/">
-                <img src="app/imgs/logo_bg.png" alt="Logo" className="ml-6 h-12" />
+                <img src="/app/imgs/logo_bg.png" alt="Logo" className="ml-6 h-12" />
             </Link>
             
             <h1 className="text-sm sm:text-base md:text-lg font-bold hidden md:block">VIDA CON PATITAS</h1>
