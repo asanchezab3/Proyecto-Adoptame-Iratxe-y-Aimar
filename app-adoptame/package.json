@@ -9,6 +9,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@fontsource/material-symbols-outlined": "^5.1.4",
     "@react-router/node": "^7.2.0",
     "@react-router/serve": "^7.2.0",
     "isbot": "^5.1.17",

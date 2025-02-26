@@ -2,10 +2,15 @@ import Menu from "../componentes/Menu";
 
 const Contacto = () => {
     return (
-        <div>
+        <div className="min-h-screen bg-white">
             <Menu />
-            <div className="bg-[#FFFFFF] text-black ">
-                <p>Esta es la página de contacto</p>
+            <div className="text-black grid md:grid-cols-2">
+                <div>
+                    <p>Formulario</p>
+                </div>
+                <div>
+                    <p>Contacto</p>
+                </div>
             </div>
         </div>
     );
