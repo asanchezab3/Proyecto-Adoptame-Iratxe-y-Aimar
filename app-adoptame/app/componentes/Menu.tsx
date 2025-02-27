@@ -4,6 +4,7 @@ const Menu = () => {
   return (
 
     <nav className="bg-[#865E53] text-white p-2 sm:p-4 flex justify-between items-center">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700"/>
         <div className="flex items-center space-x-10">
             <Link to="/">
                 <img src="/app/imgs/logo_bg.png" alt="Logo" className="ml-6 h-12" />
@@ -13,15 +14,18 @@ const Menu = () => {
         </div>
         
         <ul className="flex space-x-4 sm:space-x-12 md:space-x-24 mr-8">
-        <li>
-            <Link className="text-sm sm:text-base md:text-lg" to="/lista">Animales</Link>
-        </li>
-        <li>
-            <Link className="text-sm sm:text-base md:text-lg" to="/login">Iniciar sesión</Link>
-        </li>
-        <li>
-            <Link className="text-sm sm:text-base md:text-lg" to="/contacto">Contacto</Link>
-        </li>
+            <li className="flex items-center">
+                <span className="material-symbols-outlined mr-4">pets</span>
+                <Link className="text-sm sm:text-base md:text-lg" to="/lista">Animales</Link>
+            </li>
+            <li className="flex items-center">
+                <span className="material-symbols-outlined mr-4">person</span>
+                <Link className="text-sm sm:text-base md:text-lg" to="/login">Iniciar sesión</Link>
+            </li>
+            <li className="flex items-center">
+                <span className="material-symbols-outlined mr-4">mail</span>
+                <Link className="text-sm sm:text-base md:text-lg" to="/contacto">Contacto</Link>
+            </li>
         </ul>
     </nav>
   );
