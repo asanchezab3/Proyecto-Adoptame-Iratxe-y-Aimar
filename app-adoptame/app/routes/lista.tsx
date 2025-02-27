@@ -70,19 +70,19 @@ const [animales, setAnimales] = useState<Animal[] | null>(null);
             <Menu />
             <div className="flex flex-grow">
                 {/* MENÚ LATERAL */}
-                <div className="w-2/7 lg:w-1/7 p-8 bg-[#E0DDDD]">
+                <div className="w-3/7 lg:w-1/7 p-2 lg:p-8 bg-[#E0DDDD]">
                     {opciones.map((opcion, index) => (
                         <div key={index} className="mt-10">
                             <label>{`${opcion}`}</label>
-                            <select className="w-full mt-2 p-2 border rounded bg-[#FFFFFF]">
+                            <select className="w-full mt-2 p-1 lg:p-2 border rounded bg-[#FFFFFF] text-sm lg:text-lg">
                                 <option value="">Seleccionar</option>
                             </select>
                         </div>
                     ))}
-                    <button className="bg-[#865E53] text-white mt-30 p-2 border rounded w-full">Aplicar filtros</button>
+                    <button className="bg-[#865E53] text-white mt-30 p-2 border rounded w-full text-sm lg:text-lg">Aplicar filtros</button>
                 </div>
                 {/* LISTA DE ANIMALES */}
-                <div className="w-5/7 lg:w-6/7 grid grid grid-cols-2 lg:grid-cols-3 gap-14 md:gap-22 m-18">
+                <div className="w-4/7 lg:w-6/7 grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-22 m-8 lg:m-18">
                     {animales.map((animal, index) => (
                         <Animal key={index} id={animal.id} imagen={`/images/animales/${animal.id}.png`} nombre={animal.nombre} descripcion={`${animal.raza} - ${calcularEdad(animal.fechaNacimiento)}`} />
                     ))}

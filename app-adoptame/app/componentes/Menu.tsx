@@ -16,15 +16,15 @@ const Menu = () => {
         <ul className="flex space-x-2 sm:space-x-12 md:space-x-24 mr-2 md:mr-8">
             <li className="flex items-center">
                 <span className="material-symbols-outlined mr-2 lg:mr-4">pets</span>
-                <Link className="text-sm sm:text-base md:text-lg" to="/lista">Animales</Link>
+                <Link className="text-sm lg:text-lg" to="/lista">Animales</Link>
             </li>
             <li className="flex items-center">
                 <span className="material-symbols-outlined mr-2 lg:mr-4">person</span>
-                <Link className="text-sm sm:text-base md:text-lg" to="">Iniciar sesión</Link>
+                <Link className="text-sm lg:text-lg" to="">Iniciar sesión</Link>
             </li>
             <li className="flex items-center">
                 <span className="material-symbols-outlined mr-2 lg:mr-4">mail</span>
-                <Link className="text-sm sm:text-base md:text-lg" to="/contacto">Contacto</Link>
+                <Link className="text-sm lg:text-lg" to="/contacto">Contacto</Link>
             </li>
         </ul>
     </nav>
