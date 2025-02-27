@@ -49,21 +49,21 @@ const Contacto = () => {
                             
                             <div className="col-span-1 flex items-center justify-center">
                                 <div className="w-12 h-12 bg-[#865E53] rounded-full flex items-center justify-center">
-                                    <img src="/app/imgs/instagram.png" alt="Icono instagram" className="h-6 w-auto flex-shrink-0"/>
+                                    <img src="/images/instagram.png" alt="Icono instagram" className="h-6 w-auto flex-shrink-0"/>
                                 </div>
                             </div>
                             <p className="col-span-3">@vida_con_patitas</p>
 
                             <div className="col-span-1 flex items-center justify-center">
                                 <div className="w-12 h-12 bg-[#865E53] rounded-full flex items-center justify-center">
-                                    <img src="/app/imgs/facebook.png" alt="Icono facebook" className="h-9 w-auto flex-shrink-0"/>
+                                    <img src="/images/facebook.png" alt="Icono facebook" className="h-9 w-auto flex-shrink-0"/>
                                 </div>
                             </div>
                             <p className="col-span-3">vida_con_patitas</p>
                             
                             <div className="col-span-1 flex items-center justify-center">
                                 <div className="w-12 h-12 bg-[#865E53] rounded-full flex items-center justify-center">
-                                    <img src="/app/imgs/twitter.png" alt="Icono twitter" className="h-6 w-auto flex-shrink-0"/>
+                                    <img src="/images/twitter.png" alt="Icono twitter" className="h-6 w-auto flex-shrink-0"/>
                                 </div>
                             </div>
                             <p className="col-span-3">vida_con_patitas</p>

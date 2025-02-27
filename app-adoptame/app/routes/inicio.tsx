@@ -1,5 +1,5 @@
 import Menu from "../componentes/Menu";
-// app/imgs/inicio_animal.jpg
+
 const Inicio = () => {
   return (
     <div className="h-screen flex flex-col">
@@ -16,7 +16,7 @@ const Inicio = () => {
         {/* Imagen destacada en rectángulo */}
         <div className="w-full max-w-3xl h-200 bg-gray-300 rounded-lg mt-6 overflow-hidden flex items-center justify-center">
           <img
-            src="app/imgs/inicio_animal.jpg"
+            src="/images/inicio_animal.jpg"
             alt="Imagen representativa del proyecto"
             className="w-full h-full object-cover"
           />

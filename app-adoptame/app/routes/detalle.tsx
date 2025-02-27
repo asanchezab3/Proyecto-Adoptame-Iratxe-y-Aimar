@@ -75,7 +75,7 @@ const Detalle = () => {
           >
             {/* Imagen con altura ajustada al texto */}
             <img
-              src="/app/imgs/detalle/back.png"
+              src="/images/detalle/back.png"
               alt="Flecha atrás"
               className="h-full w-auto max-h-6 flex-shrink-0"
             />
@@ -90,7 +90,7 @@ const Detalle = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 bg-white shadow-lg p-6 rounded-lg">
           {/* Imagen del animal */}
           <img
-            src={`/app/imgs/${animal.id}.png`}
+            src={`/images/animales/${animal.id}.png`}
             alt={animal.nombre}
             className="w-40 h-40 md:w-60 md:h-60 object-cover rounded-lg shadow-md"
           />
@@ -104,7 +104,7 @@ const Detalle = () => {
               <p className="flex items-center gap-2">
                 <div className="flex items-center space-x-2">
                   <img
-                    src="/app/imgs/detalle/raza.png"
+                    src="/images/detalle/raza.png"
                     alt="raza"
                     className="h-full w-auto max-h-6 flex-shrink-0"
                   />
@@ -117,7 +117,7 @@ const Detalle = () => {
               <p className="flex items-center gap-2">
                 <div className="flex items-center space-x-2">
                   <img
-                    src="/app/imgs/detalle/calendar.png"
+                    src="/images/detalle/calendar.png"
                     alt="Calendario"
                     className="h-full w-auto max-h-6 flex-shrink-0"
                   />
@@ -130,7 +130,7 @@ const Detalle = () => {
               <p className="flex items-center gap-2">
                 <div className="flex items-center space-x-2">
                   <img
-                    src="/app/imgs/detalle/location.png"
+                    src="/images/detalle/location.png"
                     alt="Ubicacion"
                     className="h-full w-auto max-h-6 flex-shrink-0"
                   />
@@ -154,7 +154,7 @@ const Detalle = () => {
                   {Object.values(animal.like).map((item, index) => (
                     <li key={index} className="flex items-center space-x-2">
                       <img
-                        src="/app/imgs/detalle/liked.png"
+                        src="/images/detalle/liked.png"
                         alt="Icono"
                         className="h-6 w-auto flex-shrink-0"
                       />
@@ -170,7 +170,7 @@ const Detalle = () => {
                   {Object.values(animal.notLike).map((item, index) => (
                     <li key={index} className="flex items-center space-x-2">
                       <img
-                        src="/app/imgs/detalle/noLiked.png"
+                        src="/images/detalle/noLiked.png"
                         alt="Icono"
                         className="h-6 w-auto flex-shrink-0"
                       />

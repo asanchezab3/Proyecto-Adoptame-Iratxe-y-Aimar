@@ -84,7 +84,7 @@ const [animales, setAnimales] = useState<Animal[] | null>(null);
                 {/* LISTA DE ANIMALES */}
                 <div className="w-5/7 lg:w-6/7 grid grid grid-cols-2 lg:grid-cols-3 gap-14 md:gap-22 m-18">
                     {animales.map((animal, index) => (
-                        <Animal key={index} id={animal.id} imagen={`/app/imgs/${animal.id}.png`} nombre={animal.nombre} descripcion={`${animal.raza} - ${calcularEdad(animal.fechaNacimiento)}`} />
+                        <Animal key={index} id={animal.id} imagen={`/images/animales/${animal.id}.png`} nombre={animal.nombre} descripcion={`${animal.raza} - ${calcularEdad(animal.fechaNacimiento)}`} />
                     ))}
                 </div> 
             </div>
