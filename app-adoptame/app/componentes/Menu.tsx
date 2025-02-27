@@ -20,7 +20,7 @@ const Menu = () => {
             </li>
             <li className="flex items-center">
                 <span className="material-symbols-outlined mr-4">person</span>
-                <Link className="text-sm sm:text-base md:text-lg" to="/login">Iniciar sesión</Link>
+                <p className="text-sm sm:text-base md:text-lg">Iniciar sesión</p>
             </li>
             <li className="flex items-center">
                 <span className="material-symbols-outlined mr-4">mail</span>

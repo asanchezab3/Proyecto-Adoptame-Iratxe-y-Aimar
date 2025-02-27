@@ -12,6 +12,5 @@ type Params = {
   "/detalle/:id": {
     "id": string;
   };
-  "/login": {};
   "/contacto": {};
 };
