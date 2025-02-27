@@ -86,7 +86,7 @@ const [animales, setAnimales] = useState<Animal[] | null>(null);
                     {animales.map((animal, index) => (
                         <Animal key={index} id={animal.id} imagen={`/app/imgs/${animal.id}.png`} nombre={animal.nombre} descripcion={`${animal.raza} - ${calcularEdad(animal.fechaNacimiento)}`} />
                     ))}
-                </div>
+                </div> 
             </div>
         </div>
     );

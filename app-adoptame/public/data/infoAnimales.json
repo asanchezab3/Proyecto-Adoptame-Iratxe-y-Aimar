@@ -68,27 +68,112 @@
     "fechaNacimiento": "2000-02-26T00:00:00Z",
     "refugio": "Huellitas",
     "like": {
-      "0": "Dar largos paseos por el monte",
-      "1": "Jugar con los niños"
+      "0": "Descansar al sol"
     },
     "notLike": {
-      "0": "Los sitios con mucha gente"
+      "0": "Los ruidos fuertes",
+      "1": "El agua fría"
     },
-    "descripcion": "Mika es una compañera leal y amorosa que ha disfrutado de muchos años de aventuras al aire libre. Aunque sigue siendo activa, valora los momentos de tranquilidad y compañía sin grandes multitudes."
+    "descripcion": "Mika es una perra tranquila que disfruta de tomar el sol y descansar. Prefiere evitar los ruidos fuertes y el agua fría."
   },
   {
     "id": "animal6",
     "nombre": "Señor Loro",
-    "raza": "Un loro",
+    "raza": "Loro",
     "fechaNacimiento": "2022-09-26T00:00:00Z",
     "refugio": "Protectora de animales Ribera",
     "like": {
-      "0": "La compañía y la interacción",
-      "1": "Imitar sonidos y hablar"
+      "0": "La compañía",
+      "1": "Imitar sonidos",
+      "2": "Comer frutas"
     },
     "notLike": {
-      "0": "Ruidos fuertes y repentinos"
+      "0": "Estar solo"
     },
-    "descripcion": "Señor Loro es un ave inteligente y sociable que disfruta de la compañía y de aprender nuevos sonidos. Sin embargo, prefiere ambientes calmados sin ruidos estridentes que lo asusten."
+    "descripcion": "Señor Loro es un loro sociable que disfruta de la compañía y de aprender nuevos sonidos. Le encantan las frutas y evita la soledad."
+  },
+  {
+    "id": "animal7",
+    "nombre": "Rex",
+    "raza": "Pastor Alemán",
+    "fechaNacimiento": "2021-04-15T00:00:00Z",
+    "refugio": "Protectora de animales de Navarra",
+    "like": {
+      "0": "Correr en espacios abiertos",
+      "1": "Aprender trucos"
+    },
+    "notLike": {
+      "0": "El encierro prolongado",
+      "1": "Estar sin actividad"
+    },
+    "descripcion": "Rex es un pastor alemán enérgico que necesita ejercicio diario y retos mentales. No le gusta estar encerrado ni aburrirse."
+  },
+  {
+    "id": "animal8",
+    "nombre": "Nube",
+    "raza": "Gato persa",
+    "fechaNacimiento": "2019-11-30T00:00:00Z",
+    "refugio": "Huellitas",
+    "like": {
+      "0": "Dormir",
+      "1": "Ser cepillado",
+      "2": "La comida húmeda"
+    },
+    "notLike": {
+      "0": "El ruido",
+      "1": "Las sorpresas"
+    },
+    "descripcion": "Nube es un gato persa tranquilo que ama el descanso y la comida húmeda. No le gustan los ruidos ni los cambios bruscos."
+  },
+  {
+    "id": "animal9",
+    "nombre": "Rocky",
+    "raza": "Bulldog Francés",
+    "fechaNacimiento": "2020-05-10T00:00:00Z",
+    "refugio": "Protectora de animales Ribera",
+    "like": {
+      "0": "Dormir en el sofá",
+      "1": "Los mimos",
+      "2": "Jugar con juguetes"
+    },
+    "notLike": {
+      "0": "El calor excesivo"
+    },
+    "descripcion": "Rocky es un bulldog francés cariñoso que disfruta de la comodidad del sofá y los mimos. No soporta el calor excesivo."
+  },
+  {
+    "id": "animal10",
+    "nombre": "Duna",
+    "raza": "Galgo",
+    "fechaNacimiento": "2022-03-12T00:00:00Z",
+    "refugio": "Protectora de animales de Navarra",
+    "like": {
+      "0": "Correr",
+      "1": "El silencio",
+      "2": "Descansar al sol"
+    },
+    "notLike": {
+      "0": "Los espacios pequeños",
+      "1": "Las aglomeraciones"
+    },
+    "descripcion": "Duna es una galga elegante que necesita correr y un ambiente tranquilo. No le gustan los espacios reducidos ni las multitudes."
+  },
+  {
+    "id": "animal11",
+    "nombre": "Simba",
+    "raza": "Gato siamés",
+    "fechaNacimiento": "2021-06-25T00:00:00Z",
+    "refugio": "Huellitas",
+    "like": {
+      "0": "Explorar",
+      "1": "Las alturas",
+      "2": "Jugar con plumas",
+      "3": "Tomar el sol"
+    },
+    "notLike": {
+      "0": "El agua",
+      "1": "Quedarse solo mucho tiempo"
+    },
+    "descripcion": "Simba es un gato siamés curioso que adora explorar y jugar en las alturas. No le gusta el agua ni la soledad prolongada."
   }
 ]
