@@ -1,6 +1,7 @@
-import Menu from "../componentes/Menu";
+import Menu from "../components/Menu";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Loader from "~/components/Loader";
 
 const Detalle = () => {
   const { id } = useParams(); // Obtiene el ID de la URL
@@ -30,29 +31,23 @@ const Detalle = () => {
   const calcularEdad = (fechaNacimiento: string): string => {
     const fechaNac = new Date(fechaNacimiento);
     const fechaHoy = new Date();
-  
+
     let años = fechaHoy.getFullYear() - fechaNac.getFullYear();
     let meses = fechaHoy.getMonth() - fechaNac.getMonth();
-  
+
     // Ajustar si el mes de nacimiento es mayor al mes actual
     if (meses < 0) {
       años -= 1;
       meses += 12;
     }
-  
-    return `${años} año${años !== 1 ? "s" : ""} y ${meses} mes${meses !== 1 ? "es" : ""}`;
+
+    return `${años} año${años !== 1 ? "s" : ""} y ${meses} mes${
+      meses !== 1 ? "es" : ""
+    }`;
   };
 
-
   if (loading) {
-    return (
-      <div className="h-screen flex flex-col">
-        <Menu />
-        <div className="bg-white text-black p-4 flex-grow flex flex-col">
-          <p>Cargando...</p>
-        </div>
-      </div>
-    );
+    return <Loader />;
   }
   if (!animal)
     return (
