@@ -11,7 +11,32 @@ const Contacto = () => {
                 {/* Formulario */}
                 <section className="mt-10 mb-10 ml-10 lg:ml-40 mr-10 lg:mr-20">
                     <h2 className="text-sm lg:text-lg mb-10 text-center">¡Rellena nuestro formulario de contacto!</h2>
-                    <form className="bg-[#dbcfcb] min-h-100 lg:min-h-170 rounded"></form>
+                    <form className="bg-[#dbcfcb] min-h-100 lg:min-h-170 rounded-lg grid grid-rows-11 p-4 lg:p-10">
+                        <div className="row-span-2 pt-2">
+                            <label className="font-bold">Nombre</label>
+                            <input type="text" placeholder="Tu nombre"
+                                className="bg-white w-full mt-2 p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"/>
+                        </div>
+                        <div className="row-span-2 pt-2">
+                            <label className="font-bold">Correo electrónico</label>
+                            <input type="text" placeholder="Tu correo electrónico"
+                                className="bg-white w-full mt-2 p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"/>
+                        </div>
+                        <div className="row-span-2 pt-2">
+                            <label className="font-bold">Asunto</label>
+                            <input type="text" placeholder="Asunto del mensaje"
+                                className="bg-white w-full mt-2 p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"/>
+                        </div>
+                        <div className="row-span-4 pt-2">
+                            <label className=" block font-bold">Mensaje</label>
+                            <textarea placeholder="Escribe aquí tu mensaje" rows={6} 
+                                className="bg-white w-full mt-2 rounded-lg p-3"></textarea>
+                        </div>
+                        <div className="pt-4">
+                        <button type="submit" className="bg-[#865E53] text-white w-full h-full rounded-lg">Enviar mensaje</button>
+
+                        </div>
+                    </form>
                 </section>
 
                 {/* Tarjetas de contacto */}
