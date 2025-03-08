@@ -43,6 +43,7 @@ const Lista = () => {
   };
 
   const opciones = ["Tipo de animal", "Refugio", "Ciudad", "Otro"];
+  const comunidades = ["Andalucía", "Aragón", "Islas Baleares", "Canarias", "Cantabria", "Castilla-La Mancha", "Castilla y León", "Cataluña", "Comunidad de Madrid"," Comunidad Foral de Navarra", "Comunidad Valenciana", "Extremadura", "Galicia", "País Vasco", "Principado de Asturias", "Región de Murcia", "La Rioja"]
 
   if (loading) {
     return <Loader />;
@@ -62,7 +63,50 @@ const Lista = () => {
       <Menu />
       <div className="flex flex-grow">
         {/* MENÚ LATERAL */}
-        <div className="w-3/7 lg:w-1/7 p-2 lg:p-8 bg-[#E0DDDD]">
+        <form className="w-3/7 lg:w-1/7 p-2 lg:p-8 bg-[#E0DDDD]">
+          <div className="mt-10">
+            <label>Tipo de animal</label>
+            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg">
+              <option value="">Seleccionar</option>
+              <option value="perro">Perro</option>
+              <option value="gato">Gato</option>
+              <option value="pajaro">Pájaro</option>
+              <option value="roedor">Roedor</option>
+              <option value="reptil">Reptil</option>
+            </select>
+          </div>
+
+          <div className="mt-10">
+            <label>Comunidad</label>
+            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg">
+              <option value="">Seleccionar</option>
+              {comunidades.map((comunidad, index) => (
+                <option key={index} value={comunidad}>{comunidad}</option>
+              ))}
+            </select>
+          </div>
+          
+          <div className="mt-10">
+            <label>Refugio</label>
+            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg">
+              <option value="">Seleccionar</option>
+              <option value="patitas">Patitas</option>
+              <option value="protectora">Protectora</option>
+              <option value="huellitas">Huellitas</option>
+            </select>
+          </div>
+          
+          <div className="mt-10">
+            <label>Tamaño</label>
+            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg">
+              <option value="">Seleccionar</option>
+              <option value="grande">Grande</option>
+              <option value="mediano">Mediano</option>
+              <option value="pequeno">Pequeño</option>
+            </select>
+          </div>
+
+          {/*
           {opciones.map((opcion, index) => (
             <div key={index} className="mt-10">
               <label>{`${opcion}`}</label>
@@ -71,10 +115,12 @@ const Lista = () => {
               </select>
             </div>
           ))}
+          */}
+ 
           <button className="bg-[#865E53] text-white mt-30 p-2 border rounded w-full text-sm lg:text-lg">
             Aplicar filtros
           </button>
-        </div>
+        </form>
         {/* LISTA DE ANIMALES */}
         <div className="w-4/7 lg:w-6/7 grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-22 m-8 lg:m-18">
           {animales.map((animal, index) => (

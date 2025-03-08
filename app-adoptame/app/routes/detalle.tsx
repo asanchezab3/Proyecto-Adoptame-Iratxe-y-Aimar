@@ -96,7 +96,7 @@ const Detalle = () => {
 
             {/* Datos generales */}
             <div className="mt-3 space-y-2 text-gray-700">
-              <p className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <div className="flex items-center space-x-2">
                   <img
                     src="/images/detalle/raza.png"
@@ -108,8 +108,8 @@ const Detalle = () => {
                     {animal.raza}
                   </span>
                 </div>
-              </p>
-              <p className="flex items-center gap-2">
+              </div>
+              <div className="flex items-center gap-2">
                 <div className="flex items-center space-x-2">
                   <img
                     src="/images/detalle/calendar.png"
@@ -121,8 +121,8 @@ const Detalle = () => {
                     {calcularEdad(animal.fechaNacimiento)}
                   </span>
                 </div>
-              </p>
-              <p className="flex items-center gap-2">
+              </div>
+              <div className="flex items-center gap-2">
                 <div className="flex items-center space-x-2">
                   <img
                     src="/images/detalle/location.png"
@@ -133,7 +133,7 @@ const Detalle = () => {
                     {animal.refugio}
                   </span>
                 </div>
-              </p>
+              </div>
             </div>
 
             {/* Descripción */}
