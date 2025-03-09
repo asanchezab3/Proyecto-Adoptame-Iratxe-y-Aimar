@@ -7,6 +7,18 @@ const Lista = () => {
   const [animales, setAnimales] = useState<Animal[] | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const [filtrosAplicados, setFiltrosAplicados] = useState({
+    tipoAnimal: "",
+    comunidad: "",
+    refugio: "",
+    tamano: ""
+  });
+
+  const [tipoAnimal, setTipoAnimal] = useState("");
+  const [comunidad, setComunidad] = useState("");
+  const [refugio, setRefugio] = useState("");
+  const [tamano, setTamano] = useState("");
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,8 +54,7 @@ const Lista = () => {
     }`;
   };
 
-  const opciones = ["Tipo de animal", "Refugio", "Ciudad", "Otro"];
-  const comunidades = ["Andalucía", "Aragón", "Islas Baleares", "Canarias", "Cantabria", "Castilla-La Mancha", "Castilla y León", "Cataluña", "Comunidad de Madrid"," Comunidad Foral de Navarra", "Comunidad Valenciana", "Extremadura", "Galicia", "País Vasco", "Principado de Asturias", "Región de Murcia", "La Rioja"]
+  const comunidades = ["Andalucía", "Aragón", "Islas Baleares", "Canarias", "Cantabria", "Castilla-La Mancha", "Castilla y León", "Cataluña", "Comunidad de Madrid","Comunidad Foral de Navarra", "Comunidad Valenciana", "Extremadura", "Galicia", "País Vasco", "Principado de Asturias", "Región de Murcia", "La Rioja"]
 
   if (loading) {
     return <Loader />;
@@ -58,6 +69,25 @@ const Lista = () => {
       </div>
     );
 
+
+  const aplicarFiltros = () => {
+    setFiltrosAplicados({
+      tipoAnimal,
+      comunidad,
+      refugio,
+      tamano
+    });
+  };
+
+  const animalesFiltrados = animales.filter((animal) => {
+    return (
+      (filtrosAplicados.refugio === "" || animal.refugio === filtrosAplicados.refugio) &&
+      (filtrosAplicados.comunidad === "" || animal.comunidad === filtrosAplicados.comunidad) &&
+      (filtrosAplicados.tipoAnimal === "" || animal.tipo === filtrosAplicados.tipoAnimal) &&
+      (filtrosAplicados.tamano === "" || animal.tamano === filtrosAplicados.tamano) 
+    );
+  });
+
   return (
     <div className="min-h-screen bg-white text-black flex flex-col ">
       <Menu />
@@ -66,19 +96,18 @@ const Lista = () => {
         <form className="w-3/7 lg:w-1/7 p-2 lg:p-8 bg-[#E0DDDD]">
           <div className="mt-10">
             <label>Tipo de animal</label>
-            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg">
+            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg" value={tipoAnimal} onChange={(e) => setTipoAnimal(e.target.value)}>
               <option value="">Seleccionar</option>
               <option value="perro">Perro</option>
               <option value="gato">Gato</option>
               <option value="pajaro">Pájaro</option>
-              <option value="roedor">Roedor</option>
               <option value="reptil">Reptil</option>
             </select>
           </div>
 
           <div className="mt-10">
             <label>Comunidad</label>
-            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg">
+            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg" value={comunidad} onChange={(e) => setComunidad(e.target.value)}>
               <option value="">Seleccionar</option>
               {comunidades.map((comunidad, index) => (
                 <option key={index} value={comunidad}>{comunidad}</option>
@@ -88,17 +117,17 @@ const Lista = () => {
           
           <div className="mt-10">
             <label>Refugio</label>
-            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg">
+            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg" value={refugio} onChange={(e) => setRefugio(e.target.value)}>
               <option value="">Seleccionar</option>
-              <option value="patitas">Patitas</option>
-              <option value="protectora">Protectora</option>
-              <option value="huellitas">Huellitas</option>
+              <option value="Protectora de animales de Navarra">Protectora de animales de Navarra</option>
+              <option value="Huellitas">Huellitas</option>
+              <option value="Protectora de animales Ribera">Protectora de animales Ribera</option>
             </select>
           </div>
           
           <div className="mt-10">
             <label>Tamaño</label>
-            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg">
+            <select className="w-full mt-2 p-1 lg:p-2 border rounded-lg bg-[#FFFFFF] text-sm lg:text-lg" value={tamano} onChange={(e) => setTamano(e.target.value)}>
               <option value="">Seleccionar</option>
               <option value="grande">Grande</option>
               <option value="mediano">Mediano</option>
@@ -106,34 +135,25 @@ const Lista = () => {
             </select>
           </div>
 
-          {/*
-          {opciones.map((opcion, index) => (
-            <div key={index} className="mt-10">
-              <label>{`${opcion}`}</label>
-              <select className="w-full mt-2 p-1 lg:p-2 border rounded bg-[#FFFFFF] text-sm lg:text-lg">
-                <option value="">Seleccionar</option>
-              </select>
-            </div>
-          ))}
-          */}
- 
-          <button className="bg-[#865E53] text-white mt-30 p-2 border rounded w-full text-sm lg:text-lg">
+          <button type="button" className="bg-[#865E53] text-white mt-30 p-2 border rounded w-full text-sm lg:text-lg" onClick={aplicarFiltros}>
             Aplicar filtros
           </button>
         </form>
         {/* LISTA DE ANIMALES */}
         <div className="w-4/7 lg:w-6/7 grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-22 m-8 lg:m-18">
-          {animales.map((animal, index) => (
-            <Animal
-              key={index}
-              id={animal.id}
-              imagen={`/images/animales/${animal.id}.png`}
-              nombre={animal.nombre}
-              descripcion={`${animal.raza} - ${calcularEdad(
-                animal.fechaNacimiento
-              )}`}
-            />
-          ))}
+          {animalesFiltrados.length > 0 ? (
+            animalesFiltrados.map((animal, index) => (
+              <Animal
+                key={index}
+                id={animal.id}
+                imagen={`/images/animales/${animal.id}.png`}
+                nombre={animal.nombre}
+                descripcion={`${animal.raza} - ${calcularEdad(animal.fechaNacimiento)}`}
+              />
+            ))
+          ) : (
+            <p className="text-center col-span-full text-lg">No hay animales que coincidan con los filtros seleccionados.</p>
+          )}
         </div>
       </div>
     </div>
