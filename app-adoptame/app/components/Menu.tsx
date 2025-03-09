@@ -1,6 +1,15 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
+  const [user, setUser] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setUser(sessionStorage.getItem("user"));
+    }
+  }, []);
+
   return (
     <nav className="bg-[#865E53] text-white p-2 sm:p-4 flex justify-between items-center">
       <link
@@ -30,14 +39,22 @@ const Menu = () => {
         </li>
         <li className="flex items-center">
           <span className="material-symbols-outlined mr-2 lg:mr-4">person</span>
-          {sessionStorage.getItem("user") ? (
+          {" "}
+          {user ? (
+            <span>{user}</span>
+          ) : (
+            <Link className="text-sm lg:text-lg" to="/Auth/Login">
+              Iniciar sesión
+            </Link>
+          )}
+          {/* {sessionStorage.getItem("user") ? (
             <span>{sessionStorage.getItem("user")}</span>
           ) : (
             <Link className="text-sm lg:text-lg" to="/Auth/Login">
               {" "}
               Iniciar sesión
             </Link>
-          )}
+          )} */}
         </li>
         <li className="flex items-center">
           <span className="material-symbols-outlined mr-2 lg:mr-4">mail</span>
