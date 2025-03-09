@@ -14,4 +14,5 @@ type Params = {
   };
   "/contacto": {};
   "/Auth/Login": {};
+  "/Auth/Register": {};
 };
