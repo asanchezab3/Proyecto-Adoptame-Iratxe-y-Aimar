@@ -2,9 +2,18 @@ import Menu from "../components/Menu";
 import { useEffect, useState } from "react";
 
 const Contacto = () => {
+    const [user, setUser] = useState<string | null>(null);
+    const [correo, setCorreo] = useState<string | null>(null);
 
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        setUser(sessionStorage.getItem("user"));
+        setCorreo(sessionStorage.getItem("correo"));
+      }
+    }, []);
 
     const [mensajeEnviado, setMensajeEnviado] = useState(false);
+
 
     const manejarEnvio = (e: React.FormEvent) => {
         {/* Al enviarse el formulario se borra el texto de todos los campos*/}
@@ -49,13 +58,23 @@ const Contacto = () => {
                     <form className="bg-[#dbcfcb] min-h-100 lg:min-h-170 rounded-lg grid grid-rows-11 p-4 lg:p-10" onSubmit={manejarEnvio}>
                         <div className="row-span-2 pt-2">
                             <label htmlFor="nombre" className="font-bold">Nombre</label>
-                            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre"
+                            {user ? (
+                                <input id="nombre" name="nombre" type="text" value={user}
                                 className="bg-white w-full mt-2 p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"/>
+                            ) : (
+                                <input id="nombre" name="nombre" type="text" placeholder="Tu nombre"
+                                className="bg-white w-full mt-2 p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"/>
+                            )}
                         </div>
                         <div className="row-span-2 pt-2">
                             <label htmlFor="correo" className="font-bold">Correo electrónico</label>
-                            <input id="correo" name="correo" type="text" placeholder="Tu correo electrónico"
+                            {correo ? (
+                                <input id="correo" name="correo" type="text" value={correo}
                                 className="bg-white w-full mt-2 p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"/>
+                            ) : (
+                                <input id="correo" name="correo" type="text" placeholder="Tu correo electrónico"
+                                className="bg-white w-full mt-2 p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"/>
+                            )}
                         </div>
                         <div className="row-span-2 pt-2">
                             <label htmlFor="asunto" className="font-bold">Asunto</label>
